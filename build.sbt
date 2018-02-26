@@ -1,7 +1,3 @@
-import AssemblyKeys._
-
-assemblySettings
-
 classpathTypes += "maven-plugin"
 
 // resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
@@ -40,11 +36,11 @@ libraryDependencies += "org.bytedeco.javacpp-presets" % "tensorflow" % "master-1
 
 libraryDependencies += "com.google.protobuf" % "protobuf-java" % "2.5.0"
 
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "1.4.1" % "provided"
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.2.0"
 
 libraryDependencies += "com.databricks" % "spark-csv_2.11" % "1.3.0"
 
-libraryDependencies += "org.apache.spark" %% "spark-core" % "1.4.1" % "provided"
+libraryDependencies += "org.apache.spark" %% "spark-core" % "2.2.0"
 
 libraryDependencies += "net.java.dev.jna" % "jna" % "4.2.1"
 
@@ -62,9 +58,7 @@ libraryDependencies += "com.twelvemonkeys.imageio" % "imageio-core" % "3.1.2"
 libraryDependencies += "com.twelvemonkeys.common" % "common-lang" % "3.1.2"
 
 // the following is needed to make spark more compatible with amazon's aws package
-dependencyOverrides ++= Set(
- "com.fasterxml.jackson.core" % "jackson-databind" % "2.4.4"
-)
+dependencyOverrides ++= "com.fasterxml.jackson.core" % "jackson-databind" % "2.4.4"
 
 // test in assembly := {}
 
