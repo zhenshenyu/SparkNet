@@ -1,3 +1,7 @@
+import sbt._
+import Keys._
+import sbtassembly.AssemblyPlugin.autoImport._
+
 classpathTypes += "maven-plugin"
 
 // resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
